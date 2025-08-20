@@ -34,7 +34,7 @@ with col2:
 
 # 動態產生多個欄位：使用者可輸入欄位數量
 n = st.number_input("write columns number inside", min_value=1, value=4, step=1)
-cols = st.columns(n)  # 產生 n 個 columns，回傳一個 list
+cols = st.columns(n)  # 產生 n 個 columns，回傳一個 lis
 for i in range(len(cols)):
     # 透過索引將元件加入對應的欄位
     with cols[i]:
@@ -45,7 +45,7 @@ st.write("columns in a loop")
 
 # 示範在固定兩欄中的多個元件
 col1, col2 = st.columns(2)
-with col1:
+with col1:  
     st.button("button1", key="b")
     st.button("button2", key="b1")
     st.button("button3", key="b2")
@@ -85,3 +85,9 @@ st.write(f"ans={st.session_state.ans}")
 # 重置按鈕會觸發 rerun，回到初始狀態（視程式邏輯而定）
 if st.button("reset", key="banana"):
     st.rerun()
+
+st.write("---")
+st.title("write inside")
+
+text = st.text_input("write something, value=", value="this is the default text")
+st.write(f"You wrote: {text}")  # 顯示使用者輸入的文字
