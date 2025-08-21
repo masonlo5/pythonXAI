@@ -153,6 +153,3 @@ answer = random.randint(1, 100)
 text = st.text_input("write something")
 st.write(f"You wrote: {text}")
 ```
-
-- 可以讓使用者輸入字
-- 然後把輸入的內容印出來
