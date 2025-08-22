@@ -2,15 +2,11 @@ import streamlit as st
 import os
 
 st.title("store")
-
-st.image("image/mincraft.png", width=300)
-
 image_folder = "image"
 image_files = os.listdir(image_folder)
 for file in image_files:
     if not file.endswith(('.jpg', '.png', '.jpeg')):
         image_files.remove(file)
-st.write(image_files)
 
 if "products" not in st.session_state:
     st.session_state.products = {}
@@ -28,9 +24,9 @@ for image_file in image_files:
 #                           "block": {"price": 10, "stock": 10, "image": "image/block.png"},
 #                           "steve": {"price": 10, "stock": 10, "image": "image/steve.png"}
 # }
-st.session_state.products["mincraft"]["price"]
-st.session_state.products["block"]["stock"]
-st.session_state.products["steve"]["image"]
+# st.session_state.products["mincraft"]["price"]
+# st.session_state.products["block"]["stock"]
+# st.session_state.products["steve"]["image"]
 
 st.title("Product Catalog")
 cols = st.columns(3)
