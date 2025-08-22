@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="My App", layout="wide")
 all_pages = {
-    "home": [
+    "": [
         st.Page("pages/home.py", title ="home", icon="🏠"),
         st.Page("pages/handbook.py", title="notes", icon="📚"),
     ],
